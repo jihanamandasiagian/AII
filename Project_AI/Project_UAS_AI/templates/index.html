@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+
+    <form action="/predict" method="POST">
+        <!-- Age -->
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+
+        <!-- Resting Blood Pressure -->
+        <label for="trestbps">Resting Blood Pressure (trestbps):</label>
+        <input type="text" id="trestbps" name="trestbps" required><br><br>
+
+        <!-- Cholesterol -->
+        <label for="chol">Cholesterol (chol):</label>
+        <input type="text" id="chol" name="chol" required><br><br>
+
+        <!-- Oldpeak -->
+        <label for="oldpeak">Oldpeak:</label>
+        <input type="text" id="oldpeak" name="oldpeak" required><br><br>
+
+        <!-- CA -->
+        <label for="ca">Number of Major Vessels (ca):</label>
+        <input type="text" id="ca" name="ca" required><br><br>
+
+        <!-- Thalch -->
+        <label for="thalch">Maximum Heart Rate (thalch):</label>
+        <input type="text" id="thalch" name="thalch" required><br><br>
+
+        <!-- Chest Pain Type -->
+        <input type="radio" id="cp_asymptomatic" name="cp_asymptomatic" value="1">
+        <label for="cp_asymptomatic">Asymptomatic</label><br>
+        <input type="radio" id="cp_atypical_angina" name="cp_atypical_angina" value="1">
+        <label for="cp_atypical_angina">Atypical Angina</label><br>
+        <input type="radio" id="cp_non_anginal" name="cp_non_anginal" value="1">
+        <label for="cp_non_anginal">Non-Anginal Pain</label><br>
+        <input type="radio" id="cp_typical_angina" name="cp_typical_angina" value="1">
+        <label for="cp_typical_angina">Typical Angina</label><br>
+        
+
+        <!-- Resting Electrocardiographic Results -->
+        <label>Resting Electrocardiographic Results (restecg):</label><br>
+        <input type="radio" id="restecg_lv_hypertrophy" name="restecg" value="1">
+        <label for="restecg_lv_hypertrophy">Left Ventricular Hypertrophy</label><br>
+        <input type="radio" id="restecg_normal" name="restecg" value="1">
+        <label for="restecg_normal">Normal</label><br>
+        <input type="radio" id="restecg_st_t_abnormality" name="restecg" value="1">
+        <label for="restecg_st_t_abnormality">ST-T Wave Abnormality</label><br><br>
+
+        <!-- Sex -->
+        <label>Sex:</label><br>
+        <input type="radio" id="sex_Female" name="sex" value="1">
+        <label for="sex_Female">Female</label><br>
+        <input type="radio" id="sex_Male" name="sex" value="1">
+        <label for="sex_Male">Male</label><br><br>
+
+        <!-- Exang -->
+        <label>Exercise Induced Angina (exang):</label><br>
+        <input type="radio" id="exang_False" name="exang" value="1">
+        <label for="exang_False">No</label><br>
+        <input type="radio" id="exang_True" name="exang" value="1">
+        <label for="exang_True">Yes</label><br><br>
+
+        <!-- FBS -->
+        <label>Fasting Blood Sugar > 120 mg/dl (fbs):</label><br>
+        <input type="radio" id="fbs_False" name="fbs" value="1">
+        <label for="fbs_False">No</label><br>
+        <input type="radio" id="fbs_True" name="fbs" value="1">
+        <label for="fbs_True">Yes</label><br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
